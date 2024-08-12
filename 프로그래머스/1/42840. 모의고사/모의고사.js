@@ -12,15 +12,15 @@ function solution(answers) {
     {
         for(let key in student)
         {
-            if(student[key][index % student[key].length] == answers[index])
+            if(student[key][index % student[key].length] === answers[index])
                 ScoreCount[key-1]++;
         }
     }
 
-    let maxScore = Math.max(...ScoreCount);
+    let MaxScore = Math.max(...ScoreCount);
 
     ScoreCount.forEach((HighScoreStdnt, index) => {
-        if (HighScoreStdnt === maxScore) {
+        if (HighScoreStdnt === MaxScore) {
             answer.push(index + 1);
         }
     });
