@@ -7,16 +7,14 @@ function solution(n, m, section) {
         answer++;        
         if(PaintSection + m > section[section.length - 1])
             return answer;
-        else
+        
+        for(const SearchSection of section)
         {
-            for(const SearchSection of section)
+            if(SearchSection >= PaintSection + m)
             {
-                if(SearchSection >= PaintSection + m)
-                {
-                    PaintSection = SearchSection;
-                    break;
-                }            
-            }     
-        }                 
+                PaintSection = SearchSection;
+                break;
+            }            
+        }                  
     }        
 }
