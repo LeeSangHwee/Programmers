@@ -1,20 +1,15 @@
 function solution(n, m, section) {
     var answer = 0;
-        
-    let PaintSection = section[0];    
-    while(PaintSection <= n)
-    {    
-        answer++;        
-        if(PaintSection + m > section[section.length - 1])
-            return answer;
-        
-        for(const SearchSection of section)
-        {
-            if(SearchSection >= PaintSection + m)
-            {
-                PaintSection = SearchSection;
-                break;
-            }            
-        }                  
-    }        
+    let PaintSection = section[0];
+    let i = 0;
+
+    while (i < section.length)
+    {
+        answer++;
+        PaintSection = section[i] + m;
+        if (PaintSection > n) break;        
+        while (section[i] < PaintSection) i++;
+    }
+
+    return answer;
 }
