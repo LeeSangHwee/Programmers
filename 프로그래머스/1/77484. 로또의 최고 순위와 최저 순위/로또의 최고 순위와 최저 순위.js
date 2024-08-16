@@ -5,5 +5,5 @@ function solution(lottos, win_nums) {
     const match_count = lottos.filter(num=> win_nums.includes(num)).length
     const max_match_count = zero_count + match_count;    
         
-    return [rank[max_match_count], rank[match_count]]
+    return [rank[max_match_count], rank[match_count]];
 }
