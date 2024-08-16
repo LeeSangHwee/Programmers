@@ -1,5 +1,5 @@
 function solution(lottos, win_nums) {           
-    var rank = [6, 6, 5, 4, 3, 2, 1];
+    const rank = [6, 6, 5, 4, 3, 2, 1];
     
     const zero_count = lottos.filter(num => 0 === num).length;
     const match_count = lottos.filter(num=> win_nums.includes(num)).length
