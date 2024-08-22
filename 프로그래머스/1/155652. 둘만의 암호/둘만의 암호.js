@@ -9,14 +9,11 @@ function solution(s, skip, index) {
         while (changeCount < index) {
             startCode++;
             if (startCode > 122) startCode = 97;
-            if (!skipSet.has(startCode)) {
-                changeCount++;
-            }
+            if (!skipSet.has(startCode)) changeCount++;
         }
-
         return startCode;
     });
-
+    
     answer = String.fromCharCode(...sMap);
     return answer;
 }
