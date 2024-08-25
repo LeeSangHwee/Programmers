@@ -18,7 +18,8 @@ function solution(today, terms, privacies) {
             dateYear++;            
         }
 
-        if(todayYear > dateYear || (todayYear === dateYear && todayMonth > dateMonth) || (todayYear === dateYear && todayMonth === dateMonth && todayDay >= dateDay)) answer.push(index + 1);          
+        if(todayYear > dateYear || (todayYear === dateYear && todayMonth > dateMonth) || (todayYear === dateYear && todayMonth === dateMonth && todayDay >= dateDay))
+            answer.push(index + 1);          
     });
     return answer;
 }
