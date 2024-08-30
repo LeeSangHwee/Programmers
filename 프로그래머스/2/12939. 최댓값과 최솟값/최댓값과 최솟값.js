@@ -1,6 +1,4 @@
 function solution(s) {
-    let num = s.split(" ");
-    let answer = Math.min(...num).toString() + ' ' + Math.max(...num).toString();   
-    
-    return answer;
+    let numArr = s.split(" ");    
+    return Math.min(...numArr).toString() + ' ' + Math.max(...numArr).toString();
 }
