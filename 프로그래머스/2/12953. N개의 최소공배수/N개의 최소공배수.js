@@ -1,5 +1,5 @@
 function GetGCD(a, b) {	
-	for (let GCD = a % b; GCD != 0; GCD = a % b) {		
+	for (let GCD = a % b; GCD != 0; GCD = a % b) {
         a = b;
 		b = GCD;
 	}
