@@ -26,7 +26,7 @@ function solution(fees, records) {
         
         let baseFee = fees[1];
         let addFee = 0;
-        if(0 <= cars[key][1] - fees[0])        
+        if(0 < cars[key][1] - fees[0])        
             addFee = Math.ceil((cars[key][1] - fees[0])/fees[2]) * fees[3];   
         
         cars[key][1] = baseFee + addFee;        
