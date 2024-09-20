@@ -8,13 +8,14 @@ function solution(fees, records) {
         let totalMinutes = time_Hours * 60 + time_Minutes;
         
         if(cars.hasOwnProperty(carNumber)) {
-            if(cars[carNumber][0] === "IN") {
+            if(cars[carNumber][0] === "OUT") {
+                cars[carNumber][0] = "IN";
+                cars[carNumber][2] = totalMinutes;   
+            }
+            else if(cars[carNumber][0] === "IN") {
                 cars[carNumber][0] = "OUT";
                 cars[carNumber][1] += (totalMinutes - cars[carNumber][2]);
             }                
-            else if(cars[carNumber][0] === "OUT")
-                cars[carNumber][0] = "IN";
-                cars[carNumber][2] = totalMinutes;
         }            
         else cars[carNumber] = ["IN", 0, totalMinutes];
     });
