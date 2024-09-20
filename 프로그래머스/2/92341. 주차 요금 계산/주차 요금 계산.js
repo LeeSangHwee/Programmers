@@ -2,7 +2,6 @@ function solution(fees, records) {
     var answer = [];
     let cars = {};
     
-    // fees [기본 시간, 기본 요금, 단위 시간, 단위 요금]
     records.forEach((carRecord) => {
         let [time, carNumber, status] = carRecord.split(" ");
         let [time_Hours, time_Minutes] = time.split(":").map(Number);
@@ -34,6 +33,5 @@ function solution(fees, records) {
     
     let sortCars = Object.keys(cars).sort();
     answer = sortCars.map(key => cars[key][1]);
-    
     return answer;
 }
